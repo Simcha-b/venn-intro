@@ -75,3 +75,5 @@ const person: Person = {
   name: "mosh",
   age: 20,
 };
+
+

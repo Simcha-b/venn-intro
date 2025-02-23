@@ -46,4 +46,7 @@ function testOverload(a, b) {
     }
     return 0;
 }
-console.log(testOverload("a", 1));
+const person = {
+    name: "mosh",
+    age: 20,
+};
