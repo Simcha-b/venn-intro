@@ -33,12 +33,15 @@ type HangmanKeyboardProps = {
   disabledLetters: string[];
   incorrectLetters: string[];
   addGuessedLetter: (letter: string) => void;
+  disabled: boolean;
+
 };
 
 function HangmanKeyboard({
   disabledLetters,
   incorrectLetters,
   addGuessedLetter,
+  disabled,
 }: HangmanKeyboardProps) {
   return (
     <div
@@ -57,7 +60,7 @@ function HangmanKeyboard({
             className={`${styles.btn} ${isIncorrect ? styles.active : ""} ${
               isDisabled ? styles.inactive : ""
             }`}
-            disabled={isIncorrect || isDisabled}
+            disabled={isIncorrect || isDisabled|| disabled}
             onClick={() => addGuessedLetter(key)}
           >
             {key}
