@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import words from "./wordList.json";
-import HangmanDrawing from "./componets/HangmanDrawing";
-import HangmanWord from "./componets/HangmanWord";
-import HangmanKeyboard from "./componets/HangmanKeyboard";
+import HangmanDrawing from "./components/HangmanDrawing";
+import HangmanWord from "./components/HangmanWord";
+import HangmanKeyboard from "./components/HangmanKeyboard";
 function App() {
   const [wordToGuess] = useState(() => {
     return words[Math.floor(Math.random() * words.length)];
@@ -41,7 +41,7 @@ function App() {
     return () => {
       document.removeEventListener("keypress", handler);
     };
-  }, [guessedLetters]);
+  }, [guessedLetters, addGuessedLetter]);
 
   return (
     <div
