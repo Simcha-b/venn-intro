@@ -208,3 +208,5 @@ interface UserOmit {
 const userOmit: Omit<UserOmit, "email" | "age"> = {
   name: "John",
 };
+
+const a : PropertyKey = "name";
